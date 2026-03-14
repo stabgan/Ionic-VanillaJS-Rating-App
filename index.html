@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product Rating</title>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 </head>
 <body>
     <ion-app>
@@ -33,8 +32,10 @@
                                     <ion-label position="floating">Rate from 1 to 5</ion-label>
                                     <ion-input clear-input max="5" min="1" inputmode="numeric" type="number" id="num-input"></ion-input>
                                 </ion-item>
-                                <div margin-vertical padding-vertical text-right>
-                                    <ion-button id="submit" color="medium"><ion-icon slot="start" name="add"></ion-icon>Add</ion-button>
+                                <div class="ion-margin-vertical ion-padding-vertical ion-text-end">
+                                    <ion-button id="submit" color="medium">
+                                        <ion-icon slot="start" name="add"></ion-icon>Add
+                                    </ion-button>
                                 </div>
                             </ion-card-content>
                         </ion-card>
@@ -43,18 +44,15 @@
                 <ion-row>
                     <ion-col size-md="6" offset-md="3">
                         <ion-card>
-                                <ion-list-header color='medium'>
-                                        <ion-label>Rating List</ion-label>
-                                </ion-list-header>
-                            <ion-item>
-                                <ion-list id="list"></ion-list>
-                            </ion-item>
+                            <ion-list-header color="medium">
+                                <ion-label>Rating List</ion-label>
+                            </ion-list-header>
+                            <ion-list id="list"></ion-list>
                         </ion-card>
                     </ion-col>
                 </ion-row>
             </ion-grid>
         </ion-content>
-        <ion-alert-controller></ion-alert-controller>
     </ion-app>
     <script src="app.js"></script>
 </body>
