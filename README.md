@@ -1,7 +1,52 @@
-<h1>This is my first step in mastering Ionic Framework.</h1>
+# ⭐ Ionic Vanilla JS Rating App
 
-To do so, I made a basic webapp which takes two input from user - 1 is the name of a movie or product and 2nd is the rating from 1-5.
+A lightweight product/movie rating web app built with **Ionic Framework** and **vanilla JavaScript** — no Angular, React, or build tools required. Enter a product name and a rating (1–5), and the app adds it to a live list with input validation and native-style UI.
 
-<b>There is validation coded with js and the Ionic Framework is extremely responsive and shows native app profile for iOS and Android.</b>
-<h2> Try using developer's console while viewing the website and change the devices from drop down to android , ios and see how the UI changes.</h2>
-This is a stepping stone to infuse AngularJS with Ionic Framework and make a complete solution.
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| 🎨 UI Framework | [Ionic Framework](https://ionicframework.com/) (CDN, Web Components) |
+| 📝 Logic | Vanilla JavaScript (ES6+) |
+| 🌐 Markup | HTML5 |
+| 📦 Bundler | None — zero build step |
+
+## 🚀 How to Run
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/stabgan/Ionic-VanillaJS-Rating-App.git
+   cd Ionic-VanillaJS-Rating-App
+   ```
+
+2. **Open `index.html`** in any modern browser — that's it.  
+   Or serve it locally with any static server:
+   ```bash
+   # Python 3
+   python -m http.server 8000
+
+   # Node (npx)
+   npx serve .
+   ```
+
+3. **Try the responsive UI** — open DevTools, toggle the device toolbar, and switch between iOS / Android to see Ionic's adaptive styling in action.
+
+## 📸 Features
+
+- Add a product or movie name with a 1–5 star rating
+- Input validation (empty fields, out-of-range ratings) with Ionic alert dialogs
+- Responsive grid layout — looks great on mobile and desktop
+- Platform-adaptive UI (iOS ↔ Material Design) via Ionic Web Components
+
+## ⚠️ Known Issues
+
+- **`ion-alert-controller` deprecation** — The app uses the legacy `<ion-alert-controller>` element, which is deprecated in newer Ionic versions. Modern Ionic uses `alertController.create()` imported from `@ionic/core`.
+- **No persistent storage** — Ratings are stored in-memory only; refreshing the page clears the list.
+- **No delete/edit** — Once a rating is added, it cannot be removed or modified.
+- **Numeric input edge cases** — Decimal values (e.g. `3.7`) and leading-zero strings are not explicitly handled.
+
+## 📄 License
+
+This project is open source. See the repository for license details.
